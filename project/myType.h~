@@ -1,0 +1,6 @@
+typedef struct
+{
+int num;
+double flt;
+int type;//0 is integer,1 is float
+}myType;

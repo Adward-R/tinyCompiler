@@ -110,7 +110,7 @@
 		| const_value 
 		| LP expression RP		| NOT factor 
 		| MINUS factor 
-		| ID LB expression RB		| ID DOT ID	args_list : args_list COMMA expression 
+		| ID LB expression RB		| ID DOT ID		args_list : args_list COMMA expression 
 		| expression###说明:- LP为`(`- PLUS为`+`- RP为`)`- MINUS为`－`- LB为`[`- ID为`标识符`- RB为`]`- GE为`>=`- DOT为`•`- GT为`>`- COMMA为`;`- LE为`<=`
 - COLON为`,`- LT为`<`- MUL为`*`- EQUAL为`=`- DIV为`/`- ASSIGN为`:=``SYS_PROC: "write", "writeln" `
 `SYS_FUNCT: "abs","chr","odd","ord","pred","sqr","sqrt","succ"`

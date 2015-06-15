@@ -1,0 +1,9 @@
+program ex;
+const s='abcdefg';
+var
+i:integer;
+r:real;
+c:char;
+begin
+i:=1234;
+end

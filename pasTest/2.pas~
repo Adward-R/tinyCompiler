@@ -1,0 +1,9 @@
+program read1;
+const a=1;
+Var b:integer;
+begin
+	write('b=');
+	readln(b);
+	b := a+b;
+	write(b);
+end.
