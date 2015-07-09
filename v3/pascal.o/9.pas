@@ -1,0 +1,9 @@
+program sim1;
+    var a: array [0..10] of integer; b: integer;  i: integer;
+begin
+    b := 1;
+    writeln(b);
+
+    for i := 0 to 10 do a[i] := i;
+    for i := 0 to 10 do writeln(a[i] + b);
+end.

@@ -6,7 +6,7 @@
 #include <vector>
 #include <cstring>
 
-#include "symbolTable.h"
+//#include "symbolTable.h"
 
 extern int lineno;
 extern char *yytext;
@@ -136,6 +136,7 @@ enum Operator {
 	aand
 };
 
+//four data types supported
 union u {
 	SimpleType stype;
 	identifier *idref;
@@ -192,7 +193,7 @@ struct identifier {
 	int scope;
 	bool constant;
 	bool typedefinition;
-	bool passByReference;//for parameters
+	bool passByReference;//for parameters 
 	identifier(const char n[], int l):name(n),lineno(l) {}
 	identifier(const std::string &n, int l):name(n),lineno(l) {}
 	//std::string cgen();
@@ -282,9 +283,17 @@ struct const_value {
 		}
 	}
 	const_value(sys_con *c1):choice1(5) { child1.choice5 = c1; }
-	void negate() { choice1==1?child1.choice1 = -child1.choice1:
-					choice1==2?child1.choice2 = -child1.choice2:
-					child1.choice3 = -child1.choice3; }
+	void negate() { 
+		if (choice1==1) {
+			child1.choice1 = -child1.choice1;
+		}
+		else if (choice1==2) {
+			child1.choice2 = -child1.choice2
+		}
+		else {
+			child1.choice2 = -child1.choice2;
+		}
+	}
 	bool semanticCheck(identifier *id, int scope);
 	std::string cgen();
 };
@@ -306,7 +315,9 @@ struct type_definition {
 	identifier *child1;
 	type_decl *child2;
 	type_definition *next;
-	type_definition(identifier *c1, type_decl *c2, type_definition *n):child1(c1),child2(c2),next(n) { printf("type_definition constructor : %s\n", c1->name.c_str()); }
+	type_definition(identifier *c1, type_decl *c2, type_definition *n):child1(c1),child2(c2),next(n) { 
+		printf("type_definition constructor : %s\n", c1->name.c_str()); 
+	}
 	bool semanticCheck(int scope);
 	std::string cgen();
 };
@@ -365,8 +376,17 @@ struct range {
 	const_value *child2;
 	range(const_value *c1, const_value *c2):child1(c1),child2(c2),size(-1) {}
 	int size;//useful only for array
-	void negate() { child1->negate(); child2->negate(); }
-	void negate(int c) { c==1?child1->negate():child2->negate(); }
+	void negate() { 
+		child1->negate(); 
+		child2->negate(); 
+	}
+	void negate(int c) { 
+		if (c==1) {
+			child1->negate();
+		}
+		else {
+			child2->negate();
+		}
 	bool semanticCheck();
 	std::string cgen();
 };
@@ -570,12 +590,12 @@ struct assign_stmt {
 		} choice3;
 	} child2;
 	assign_stmt(identifier *c1, expression *c2):child1(c1),choice2(1) { child2.choice1 = c2; }
-	assign_stmt(identifier *c1, expression *c21, expression *c22):child1(c1),choice2(2) {
-		child2.choice2.child1 = c21;
+	assign_stmt(identifier *c1, expression *c21, expression *c22):child1(c1),choice2(2) { 
+		child2.choice2.child1 = c21; 
 		child2.choice2.child2 = c22;
 	}
-	assign_stmt(identifier *c1, identifier *c21, expression *c22):child1(c1),choice2(3) {
-		child2.choice3.child1 = c21;
+	assign_stmt(identifier *c1, identifier *c21, expression *c22):child1(c1),choice2(3) { 
+		child2.choice3.child1 = c21; 
 		child2.choice3.child2 = c22;
 	}
 	bool semanticCheck(int scope);
@@ -816,14 +836,14 @@ struct factor {
 	*/
 	u value;
 	factor(identifier *c1):choice1(1) { child1.choice1 = c1; }
-	factor(identifier *c11,args_list *c12):choice1(2) {
+	factor(identifier *c11,args_list *c12):choice1(2) { 
 		child1.choice2.child1 = c11;
 		child1.choice2.child2 = c12;
 	}
 	factor(sys_funct *c1):choice1(3) { child1.choice3 = c1; }
 	factor(sys_funct *c11,args_list *c12):choice1(4) {
 		child1.choice4.child1 = c11;
-		child1.choice4.child2 = c12;
+		child1.choice4.child2 = c12;		
 	}
 	factor(const_value *c1):choice1(5) { child1.choice5 = c1; }
 	factor(expression *c1):choice1(6) { child1.choice6 = c1; }
@@ -831,11 +851,11 @@ struct factor {
 	factor(factor *c1, factor *dummy):choice1(8) { child1.choice8 = c1; }
 	factor(identifier *c11,expression *c12, expression *dummy):choice1(9) {
 		child1.choice9.child1 = c11;
-		child1.choice9.child2 = c12;
+		child1.choice9.child2 = c12;		
 	}
 	factor(identifier *c11,identifier *c12):choice1(10) {
 		child1.choice10.child1 = c11;
-		child1.choice10.child2 = c12;
+		child1.choice10.child2 = c12;		
 	}
 	bool semanticCheck(int scope);
 	std::string cgen();

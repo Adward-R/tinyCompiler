@@ -1,0 +1,984 @@
+clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+In file included from declare.cpp:1:
+./declare.h:291:36: error: expected ';' after expression
+                        child1.choice2 = -child1.choice2
+                                                        ^
+                                                        ;
+./declare.h:388:20: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        bool semanticCheck();
+                          ^~
+./declare.h:388:20: note: replace parentheses with an initializer to declare a variable
+        bool semanticCheck();
+                          ^~
+                           = false
+./declare.h:389:18: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        std::string cgen();
+                        ^~
+./declare.h:389:18: note: remove parentheses to declare a variable
+        std::string cgen();
+                        ^~
+./declare.h:873:2: error: expected ';' after struct
+}
+ ^
+ ;
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:511:13: error: no template named 'allocator_traits'; did you mean '::std::allocator_traits'?
+    typedef allocator_traits<allocator_type>                __alloc_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:1406:30: note: '::std::allocator_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY allocator_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:534:44: error: no member named 'addressof' in namespace 'lwd::std::__1'; did you mean '::std::addressof'?
+            __alloc_traits::destroy(__na_, _VSTD::addressof(__p->__value_));
+                                           ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base:83:1: note: '::std::addressof' declared here
+addressof(_Tp& __x) _NOEXCEPT
+^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:559:26: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+                typename pointer_traits<_VoidPtr>::template
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:570:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:577:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:624:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:630:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:632:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:636:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:652:17: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+        {return pointer_traits<pointer>::pointer_to(__ptr_->__value_);}
+                ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:693:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:695:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:705:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:707:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag       iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from declare.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:711:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.
+In file included from scanner.l:3:
+./declare.h:291:36: error: expected ';' after expression
+                        child1.choice2 = -child1.choice2
+                                                        ^
+                                                        ;
+./declare.h:388:20: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        bool semanticCheck();
+                          ^~
+./declare.h:388:20: note: replace parentheses with an initializer to declare a variable
+        bool semanticCheck();
+                          ^~
+                           = false
+./declare.h:389:18: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        std::string cgen();
+                        ^~
+./declare.h:389:18: note: remove parentheses to declare a variable
+        std::string cgen();
+                        ^~
+./declare.h:873:2: error: expected ';' after struct
+}
+ ^
+ ;
+lex.yy.c:747:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register yy_state_type yy_current_state;
+        ^~~~~~~~~
+lex.yy.c:748:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *yy_cp, *yy_bp;
+        ^~~~~~~~~
+lex.yy.c:748:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *yy_cp, *yy_bp;
+        ^~~~~~~~~
+lex.yy.c:749:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register int yy_act;
+        ^~~~~~~~~
+lex.yy.c:798:4: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+                        register YY_CHAR yy_c = yy_ec[YY_SC_TO_UI(*yy_cp)];
+                        ^~~~~~~~~
+lex.yy.c:1343:6: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *dest = YY_CURRENT_BUFFER_LVALUE->yy_ch_buf;
+        ^~~~~~~~~
+lex.yy.c:1344:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *source = (yytext_ptr);
+        ^~~~~~~~~
+lex.yy.c:1345:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register int number_to_move, i;
+        ^~~~~~~~~
+lex.yy.c:1345:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register int number_to_move, i;
+        ^~~~~~~~~
+lex.yy.c:1477:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register yy_state_type yy_current_state;
+        ^~~~~~~~~
+lex.yy.c:1478:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *yy_cp;
+        ^~~~~~~~~
+lex.yy.c:1484:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+                register YY_CHAR yy_c = (*yy_cp ? yy_ec[YY_SC_TO_UI(*yy_cp)] : 1);
+                ^~~~~~~~~
+lex.yy.c:1509:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register int yy_is_jam;
+        ^~~~~~~~~
+lex.yy.c:1510:6: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *yy_cp = (yy_c_buf_p);
+        ^~~~~~~~~
+lex.yy.c:1512:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register YY_CHAR yy_c = 1;
+        ^~~~~~~~~
+lex.yy.c:1532:2: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+        register char *yy_cp;
+        ^~~~~~~~~
+lex.yy.c:1542:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+                register yy_size_t number_to_move = (yy_n_chars) + 2;
+                ^~~~~~~~~
+lex.yy.c:1543:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+                register char *dest = &YY_CURRENT_BUFFER_LVALUE->yy_ch_buf[
+                ^~~~~~~~~
+lex.yy.c:1545:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+                register char *source =
+                ^~~~~~~~~
+lex.yy.c:1851:2: error: call to 'yy_delete_buffer' is ambiguous
+        yy_delete_buffer(YY_CURRENT_BUFFER );
+        ^~~~~~~~~~~~~~~~
+lex.yy.c:290:6: note: candidate function
+void yy_delete_buffer (YY_BUFFER_STATE b  );
+     ^
+lex.yy.c:1736:10: note: candidate function
+    void yy_delete_buffer (YY_BUFFER_STATE  b )
+         ^
+lex.yy.c:1938:2: error: call to 'yy_switch_to_buffer' is ambiguous
+        yy_switch_to_buffer(b  );
+        ^~~~~~~~~~~~~~~~~~~
+lex.yy.c:288:6: note: candidate function
+void yy_switch_to_buffer (YY_BUFFER_STATE new_buffer  );
+     ^
+lex.yy.c:1663:10: note: candidate function
+    void yy_switch_to_buffer  (YY_BUFFER_STATE  new_buffer )
+         ^
+lex.yy.c:2134:3: error: call to 'yy_delete_buffer' is ambiguous
+                yy_delete_buffer(YY_CURRENT_BUFFER  );
+                ^~~~~~~~~~~~~~~~
+lex.yy.c:290:6: note: candidate function
+void yy_delete_buffer (YY_BUFFER_STATE b  );
+     ^
+lex.yy.c:1736:10: note: candidate function
+    void yy_delete_buffer (YY_BUFFER_STATE  b )
+         ^
+scanner.l:146:1: error: expected '}'
+^
+./declare.h:19:15: note: to match this '{'
+namespace lwd {
+              ^
+21 warnings and 6 errors generated.
+In file included from main.cpp:1:
+./declare.h:291:36: error: expected ';' after expression
+                        child1.choice2 = -child1.choice2
+                                                        ^
+                                                        ;
+./declare.h:388:20: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        bool semanticCheck();
+                          ^~
+./declare.h:388:20: note: replace parentheses with an initializer to declare a variable
+        bool semanticCheck();
+                          ^~
+                           = false
+./declare.h:389:18: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        std::string cgen();
+                        ^~
+./declare.h:389:18: note: remove parentheses to declare a variable
+        std::string cgen();
+                        ^~
+./declare.h:873:2: error: expected ';' after struct
+}
+ ^
+ ;
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:511:13: error: no template named 'allocator_traits'; did you mean '::std::allocator_traits'?
+    typedef allocator_traits<allocator_type>                __alloc_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:1406:30: note: '::std::allocator_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY allocator_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:534:44: error: no member named 'addressof' in namespace 'lwd::std::__1'; did you mean '::std::addressof'?
+            __alloc_traits::destroy(__na_, _VSTD::addressof(__p->__value_));
+                                           ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base:83:1: note: '::std::addressof' declared here
+addressof(_Tp& __x) _NOEXCEPT
+^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:559:26: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+                typename pointer_traits<_VoidPtr>::template
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:570:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:577:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:624:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:630:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:632:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:636:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:652:17: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+        {return pointer_traits<pointer>::pointer_to(__ptr_->__value_);}
+                ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:693:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:695:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:705:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:707:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag       iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from main.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:711:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.
+In file included from symbolTable.cpp:1:
+./declare.h:291:36: error: expected ';' after expression
+                        child1.choice2 = -child1.choice2
+                                                        ^
+                                                        ;
+./declare.h:388:20: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        bool semanticCheck();
+                          ^~
+./declare.h:388:20: note: replace parentheses with an initializer to declare a variable
+        bool semanticCheck();
+                          ^~
+                           = false
+./declare.h:389:18: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        std::string cgen();
+                        ^~
+./declare.h:389:18: note: remove parentheses to declare a variable
+        std::string cgen();
+                        ^~
+./declare.h:873:2: error: expected ';' after struct
+}
+ ^
+ ;
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:511:13: error: no template named 'allocator_traits'; did you mean '::std::allocator_traits'?
+    typedef allocator_traits<allocator_type>                __alloc_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:1406:30: note: '::std::allocator_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY allocator_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:534:44: error: no member named 'addressof' in namespace 'lwd::std::__1'; did you mean '::std::addressof'?
+            __alloc_traits::destroy(__na_, _VSTD::addressof(__p->__value_));
+                                           ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base:83:1: note: '::std::addressof' declared here
+addressof(_Tp& __x) _NOEXCEPT
+^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:559:26: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+                typename pointer_traits<_VoidPtr>::template
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:570:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:577:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:624:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:630:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:632:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:636:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:652:17: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+        {return pointer_traits<pointer>::pointer_to(__ptr_->__value_);}
+                ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:693:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:695:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:705:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:707:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag       iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from symbolTable.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:711:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.
+In file included from util.cpp:1:
+./declare.h:291:36: error: expected ';' after expression
+                        child1.choice2 = -child1.choice2
+                                                        ^
+                                                        ;
+./declare.h:388:20: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        bool semanticCheck();
+                          ^~
+./declare.h:388:20: note: replace parentheses with an initializer to declare a variable
+        bool semanticCheck();
+                          ^~
+                           = false
+./declare.h:389:18: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        std::string cgen();
+                        ^~
+./declare.h:389:18: note: remove parentheses to declare a variable
+        std::string cgen();
+                        ^~
+./declare.h:873:2: error: expected ';' after struct
+}
+ ^
+ ;
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:511:13: error: no template named 'allocator_traits'; did you mean '::std::allocator_traits'?
+    typedef allocator_traits<allocator_type>                __alloc_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:1406:30: note: '::std::allocator_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY allocator_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:534:44: error: no member named 'addressof' in namespace 'lwd::std::__1'; did you mean '::std::addressof'?
+            __alloc_traits::destroy(__na_, _VSTD::addressof(__p->__value_));
+                                           ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__functional_base:83:1: note: '::std::addressof' declared here
+addressof(_Tp& __x) _NOEXCEPT
+^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:559:26: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+                typename pointer_traits<_VoidPtr>::template
+                         ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:570:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:577:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<_VoidPtr>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:609:24: error: no template named 'forward' in namespace 'lwd::std::__1'; did you mean '::std::forward'?
+            : __value_(_VSTD::forward<_Args>(__args)...) {}
+                       ^~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__config:358:15: note: expanded from macro '_VSTD'
+#define _VSTD std::_LIBCPP_NAMESPACE
+              ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/type_traits:1612:1: note: '::std::forward' declared here
+forward(typename std::remove_reference<_Tp>::type& __t) _NOEXCEPT
+^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:624:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:630:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:632:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:636:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:652:17: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+        {return pointer_traits<pointer>::pointer_to(__ptr_->__value_);}
+                ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:693:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::element_type __node;
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:695:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:705:13: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef pointer_traits<__node_pointer> __pointer_traits;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:707:13: error: unknown type name 'bidirectional_iterator_tag'; did you mean '::std::bidirectional_iterator_tag'?
+    typedef bidirectional_iterator_tag       iterator_category;
+            ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:352:30: note: '::std::bidirectional_iterator_tag' declared here
+struct _LIBCPP_TYPE_VIS_ONLY bidirectional_iterator_tag : public forward_iterator_tag {};
+                             ^
+In file included from util.cpp:2:
+In file included from ./symbolTable.h:8:
+In file included from /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:423:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/__tree:711:22: error: no template named 'pointer_traits'; did you mean '::std::pointer_traits'?
+    typedef typename pointer_traits<__node_pointer>::template
+                     ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:876:30: note: '::std::pointer_traits' declared here
+struct _LIBCPP_TYPE_VIS_ONLY pointer_traits
+                             ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.
+In file included from parser.y:5:
+./declare.h:291:36: error: expected ';' after expression
+                        child1.choice2 = -child1.choice2
+                                                        ^
+                                                        ;
+./declare.h:388:20: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        bool semanticCheck();
+                          ^~
+./declare.h:388:20: note: replace parentheses with an initializer to declare a variable
+        bool semanticCheck();
+                          ^~
+                           = false
+./declare.h:389:18: warning: empty parentheses interpreted as a function declaration [-Wvexing-parse]
+        std::string cgen();
+                        ^~
+./declare.h:389:18: note: remove parentheses to declare a variable
+        std::string cgen();
+                        ^~
+./declare.h:873:2: error: expected ';' after struct
+}
+ ^
+ ;
+parser.y:275:46: error: allocation of incomplete type 'lwd::idrange'
+    { (yyval.p17) = new simple_type_decl(new idrange((yyvsp[(1) - (3)].p0),(yyvsp[(3) - (3)].p0))); }
+                                             ^~~~~~~
+./declare.h:43:8: note: forward declaration of 'lwd::idrange'
+struct idrange;
+       ^
+parser.y:284:25: error: allocation of incomplete type 'lwd::array_type_decl'
+    { (yyval.p18) = new array_type_decl((yyvsp[(3) - (6)].p17),(yyvsp[(6) - (6)].p16)); }
+                        ^~~~~~~~~~~~~~~
+./declare.h:38:8: note: forward declaration of 'lwd::array_type_decl'
+struct array_type_decl;
+       ^
+parser.y:287:25: error: allocation of incomplete type 'lwd::record_type_decl'
+    { (yyval.p19) = new record_type_decl((yyvsp[(2) - (3)].p25)); }
+                        ^~~~~~~~~~~~~~~~
+./declare.h:39:8: note: forward declaration of 'lwd::record_type_decl'
+struct record_type_decl;
+       ^
+parser.y:292:16: error: member access into incomplete type 'field_decl_list' (aka 'lwd::field_decl')
+                                        while(node->next!=NULL)
+                                                  ^
+./declare.h:44:8: note: forward declaration of 'lwd::field_decl'
+struct field_decl;
+       ^
+parser.y:293:18: error: member access into incomplete type 'field_decl_list' (aka 'lwd::field_decl')
+                                                node = node->next;
+                                                           ^
+./declare.h:44:8: note: forward declaration of 'lwd::field_decl'
+struct field_decl;
+       ^
+parser.y:294:10: error: member access into incomplete type 'field_decl_list' (aka 'lwd::field_decl')
+                                        node->next = (yyvsp[(2) - (2)].p24);
+                                            ^
+./declare.h:44:8: note: forward declaration of 'lwd::field_decl'
+struct field_decl;
+       ^
+parser.y:300:25: error: allocation of incomplete type 'lwd::field_decl'
+    { (yyval.p24) = new field_decl((yyvsp[(1) - (4)].p21),(yyvsp[(3) - (4)].p16),NULL); }
+                        ^~~~~~~~~~
+./declare.h:44:8: note: forward declaration of 'lwd::field_decl'
+struct field_decl;
+       ^
+parser.y:303:25: error: allocation of incomplete type 'lwd::name_list'
+    { (yyval.p21) = new name_list((yyvsp[(1) - (3)].p21),(yyvsp[(3) - (3)].p0)); }
+                        ^~~~~~~~~
+./declare.h:41:8: note: forward declaration of 'lwd::name_list'
+struct name_list;
+       ^
+parser.y:304:25: error: allocation of incomplete type 'lwd::name_list'
+    { (yyval.p21) = new name_list(NULL,(yyvsp[(1) - (1)].p0)); }
+                        ^~~~~~~~~
+./declare.h:41:8: note: forward declaration of 'lwd::name_list'
+struct name_list;
+       ^
+parser.y:307:24: error: allocation of incomplete type 'lwd::var_part'
+    { (yyval.p9) = new var_part((yyvsp[(2) - (2)].p27)); }
+                       ^~~~~~~~
+./declare.h:29:8: note: forward declaration of 'lwd::var_part'
+struct var_part;
+       ^
+parser.y:308:24: error: allocation of incomplete type 'lwd::var_part'
+    { (yyval.p9) = new var_part(NULL); }
+                       ^~~~~~~~
+./declare.h:29:8: note: forward declaration of 'lwd::var_part'
+struct var_part;
+       ^
+parser.y:313:16: error: member access into incomplete type 'var_decl_list' (aka 'lwd::var_decl')
+                                        while(node->next!=NULL)
+                                                  ^
+./declare.h:46:8: note: forward declaration of 'lwd::var_decl'
+struct var_decl;
+       ^
+parser.y:314:18: error: member access into incomplete type 'var_decl_list' (aka 'lwd::var_decl')
+                                                node = node->next;
+                                                           ^
+./declare.h:46:8: note: forward declaration of 'lwd::var_decl'
+struct var_decl;
+       ^
+parser.y:315:10: error: member access into incomplete type 'var_decl_list' (aka 'lwd::var_decl')
+                                        node->next = (yyvsp[(2) - (2)].p26);
+                                            ^
+./declare.h:46:8: note: forward declaration of 'lwd::var_decl'
+struct var_decl;
+       ^
+parser.y:321:25: error: allocation of incomplete type 'lwd::var_decl'
+    { (yyval.p26) = new var_decl((yyvsp[(1) - (4)].p21),(yyvsp[(3) - (4)].p16),NULL); }
+                        ^~~~~~~~
+./declare.h:46:8: note: forward declaration of 'lwd::var_decl'
+struct var_decl;
+       ^
+parser.y:325:49: error: member access into incomplete type 'lwd::routine_part'
+                                function_decl *node = (yyvsp[(1) - (2)].p10)->child1;
+                                                                            ^
+./declare.h:30:8: note: forward declaration of 'lwd::routine_part'
+struct routine_part;
+       ^
+parser.y:327:28: error: member access into incomplete type 'lwd::routine_part'
+                                        (yyvsp[(1) - (2)].p10)->child1 = (yyvsp[(2) - (2)].p28);
+                                                              ^
+./declare.h:30:8: note: forward declaration of 'lwd::routine_part'
+struct routine_part;
+       ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+2 warnings and 20 errors generated.

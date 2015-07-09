@@ -1,0 +1,368 @@
+clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+clang: warning: treating 'c' input as 'c++' when in C++ mode, this behavior is deprecated
+In file included from declare.cpp:1:
+In file included from ./declare.h:9:
+./symbolTable.h:22:8: error: no type named 'program' in namespace 'lwd'
+                lwd::program *type1;
+                ~~~~~^
+./symbolTable.h:23:8: error: no type named 'function_decl' in namespace 'lwd'
+                lwd::function_decl *type2;
+                ~~~~~^
+./symbolTable.h:24:8: error: no type named 'procedure_decl' in namespace 'lwd'
+                lwd::procedure_decl *type3;
+                ~~~~~^
+./symbolTable.h:26:25: error: no type named 'program' in namespace 'lwd'
+        scopeValue(int p, lwd::program *t):parent(p),choice(1) { type.type1 = t; }
+                          ~~~~~^
+./symbolTable.h:27:25: error: no type named 'function_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::function_decl *t):parent(p),choice(2) { type.type2 = t; }
+                          ~~~~~^
+./symbolTable.h:28:25: error: no type named 'procedure_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
+                          ~~~~~^
+./symbolTable.h:47:40: error: no member named 'identifier' in namespace 'lwd'
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                         ~~~~~^
+./symbolTable.h:47:52: error: expected expression
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                          ^
+./symbolTable.h:47:54: error: expected a type
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                            ^
+./symbolTable.h:50:11: error: use of undeclared identifier 'identifier'
+        std::set<identifier *> const_pool;
+                 ^
+./symbolTable.h:50:23: error: expected expression
+        std::set<identifier *> const_pool;
+                             ^
+./symbolTable.h:55:21: error: no type named 'identifier' in namespace 'lwd'
+        void addConst(lwd::identifier *id) { const_pool.insert(id); }
+                      ~~~~~^
+./symbolTable.h:57:16: error: no member named 'identifier' in namespace 'lwd'
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                 ~~~~~^
+./symbolTable.h:57:28: error: expected expression
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                                  ^
+./symbolTable.h:73:23: error: no type named 'program' in namespace 'lwd'
+        int insertScope(lwd::program *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:92:23: error: no type named 'function_decl' in namespace 'lwd'
+        int insertScope(lwd::function_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:111:23: error: no type named 'procedure_decl' in namespace 'lwd'
+        int insertScope(lwd::procedure_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:136:23: error: no type named 'program' in namespace 'lwd'
+        int lookUpScope(lwd::program *id);
+                        ~~~~~^
+./symbolTable.h:137:23: error: no type named 'function_decl' in namespace 'lwd'
+        int lookUpScope(lwd::function_decl *id);
+                        ~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from scanner.l:3:
+In file included from ./declare.h:9:
+./symbolTable.h:22:8: error: no type named 'program' in namespace 'lwd'
+                lwd::program *type1;
+                ~~~~~^
+./symbolTable.h:23:8: error: no type named 'function_decl' in namespace 'lwd'
+                lwd::function_decl *type2;
+                ~~~~~^
+./symbolTable.h:24:8: error: no type named 'procedure_decl' in namespace 'lwd'
+                lwd::procedure_decl *type3;
+                ~~~~~^
+./symbolTable.h:26:25: error: no type named 'program' in namespace 'lwd'
+        scopeValue(int p, lwd::program *t):parent(p),choice(1) { type.type1 = t; }
+                          ~~~~~^
+./symbolTable.h:27:25: error: no type named 'function_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::function_decl *t):parent(p),choice(2) { type.type2 = t; }
+                          ~~~~~^
+./symbolTable.h:28:25: error: no type named 'procedure_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
+                          ~~~~~^
+./symbolTable.h:47:40: error: no member named 'identifier' in namespace 'lwd'
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                         ~~~~~^
+./symbolTable.h:47:52: error: expected expression
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                          ^
+./symbolTable.h:47:54: error: expected a type
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                            ^
+./symbolTable.h:50:11: error: use of undeclared identifier 'identifier'
+        std::set<identifier *> const_pool;
+                 ^
+./symbolTable.h:50:23: error: expected expression
+        std::set<identifier *> const_pool;
+                             ^
+./symbolTable.h:55:21: error: no type named 'identifier' in namespace 'lwd'
+        void addConst(lwd::identifier *id) { const_pool.insert(id); }
+                      ~~~~~^
+./symbolTable.h:57:16: error: no member named 'identifier' in namespace 'lwd'
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                 ~~~~~^
+./symbolTable.h:57:28: error: expected expression
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                                  ^
+./symbolTable.h:73:23: error: no type named 'program' in namespace 'lwd'
+        int insertScope(lwd::program *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:92:23: error: no type named 'function_decl' in namespace 'lwd'
+        int insertScope(lwd::function_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:111:23: error: no type named 'procedure_decl' in namespace 'lwd'
+        int insertScope(lwd::procedure_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:136:23: error: no type named 'program' in namespace 'lwd'
+        int lookUpScope(lwd::program *id);
+                        ~~~~~^
+./symbolTable.h:137:23: error: no type named 'function_decl' in namespace 'lwd'
+        int lookUpScope(lwd::function_decl *id);
+                        ~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from main.cpp:1:
+In file included from ./declare.h:9:
+./symbolTable.h:22:8: error: no type named 'program' in namespace 'lwd'
+                lwd::program *type1;
+                ~~~~~^
+./symbolTable.h:23:8: error: no type named 'function_decl' in namespace 'lwd'
+                lwd::function_decl *type2;
+                ~~~~~^
+./symbolTable.h:24:8: error: no type named 'procedure_decl' in namespace 'lwd'
+                lwd::procedure_decl *type3;
+                ~~~~~^
+./symbolTable.h:26:25: error: no type named 'program' in namespace 'lwd'
+        scopeValue(int p, lwd::program *t):parent(p),choice(1) { type.type1 = t; }
+                          ~~~~~^
+./symbolTable.h:27:25: error: no type named 'function_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::function_decl *t):parent(p),choice(2) { type.type2 = t; }
+                          ~~~~~^
+./symbolTable.h:28:25: error: no type named 'procedure_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
+                          ~~~~~^
+./symbolTable.h:47:40: error: no member named 'identifier' in namespace 'lwd'
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                         ~~~~~^
+./symbolTable.h:47:52: error: expected expression
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                          ^
+./symbolTable.h:47:54: error: expected a type
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                            ^
+./symbolTable.h:50:11: error: use of undeclared identifier 'identifier'
+        std::set<identifier *> const_pool;
+                 ^
+./symbolTable.h:50:23: error: expected expression
+        std::set<identifier *> const_pool;
+                             ^
+./symbolTable.h:55:21: error: no type named 'identifier' in namespace 'lwd'
+        void addConst(lwd::identifier *id) { const_pool.insert(id); }
+                      ~~~~~^
+./symbolTable.h:57:16: error: no member named 'identifier' in namespace 'lwd'
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                 ~~~~~^
+./symbolTable.h:57:28: error: expected expression
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                                  ^
+./symbolTable.h:73:23: error: no type named 'program' in namespace 'lwd'
+        int insertScope(lwd::program *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:92:23: error: no type named 'function_decl' in namespace 'lwd'
+        int insertScope(lwd::function_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:111:23: error: no type named 'procedure_decl' in namespace 'lwd'
+        int insertScope(lwd::procedure_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:136:23: error: no type named 'program' in namespace 'lwd'
+        int lookUpScope(lwd::program *id);
+                        ~~~~~^
+./symbolTable.h:137:23: error: no type named 'function_decl' in namespace 'lwd'
+        int lookUpScope(lwd::function_decl *id);
+                        ~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from symbolTable.cpp:1:
+In file included from ./declare.h:9:
+./symbolTable.h:22:8: error: no type named 'program' in namespace 'lwd'
+                lwd::program *type1;
+                ~~~~~^
+./symbolTable.h:23:8: error: no type named 'function_decl' in namespace 'lwd'
+                lwd::function_decl *type2;
+                ~~~~~^
+./symbolTable.h:24:8: error: no type named 'procedure_decl' in namespace 'lwd'
+                lwd::procedure_decl *type3;
+                ~~~~~^
+./symbolTable.h:26:25: error: no type named 'program' in namespace 'lwd'
+        scopeValue(int p, lwd::program *t):parent(p),choice(1) { type.type1 = t; }
+                          ~~~~~^
+./symbolTable.h:27:25: error: no type named 'function_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::function_decl *t):parent(p),choice(2) { type.type2 = t; }
+                          ~~~~~^
+./symbolTable.h:28:25: error: no type named 'procedure_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
+                          ~~~~~^
+./symbolTable.h:47:40: error: no member named 'identifier' in namespace 'lwd'
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                         ~~~~~^
+./symbolTable.h:47:52: error: expected expression
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                          ^
+./symbolTable.h:47:54: error: expected a type
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                            ^
+./symbolTable.h:50:11: error: use of undeclared identifier 'identifier'
+        std::set<identifier *> const_pool;
+                 ^
+./symbolTable.h:50:23: error: expected expression
+        std::set<identifier *> const_pool;
+                             ^
+./symbolTable.h:55:21: error: no type named 'identifier' in namespace 'lwd'
+        void addConst(lwd::identifier *id) { const_pool.insert(id); }
+                      ~~~~~^
+./symbolTable.h:57:16: error: no member named 'identifier' in namespace 'lwd'
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                 ~~~~~^
+./symbolTable.h:57:28: error: expected expression
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                                  ^
+./symbolTable.h:73:23: error: no type named 'program' in namespace 'lwd'
+        int insertScope(lwd::program *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:92:23: error: no type named 'function_decl' in namespace 'lwd'
+        int insertScope(lwd::function_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:111:23: error: no type named 'procedure_decl' in namespace 'lwd'
+        int insertScope(lwd::procedure_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:136:23: error: no type named 'program' in namespace 'lwd'
+        int lookUpScope(lwd::program *id);
+                        ~~~~~^
+./symbolTable.h:137:23: error: no type named 'function_decl' in namespace 'lwd'
+        int lookUpScope(lwd::function_decl *id);
+                        ~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from util.cpp:1:
+In file included from ./declare.h:9:
+./symbolTable.h:22:8: error: no type named 'program' in namespace 'lwd'
+                lwd::program *type1;
+                ~~~~~^
+./symbolTable.h:23:8: error: no type named 'function_decl' in namespace 'lwd'
+                lwd::function_decl *type2;
+                ~~~~~^
+./symbolTable.h:24:8: error: no type named 'procedure_decl' in namespace 'lwd'
+                lwd::procedure_decl *type3;
+                ~~~~~^
+./symbolTable.h:26:25: error: no type named 'program' in namespace 'lwd'
+        scopeValue(int p, lwd::program *t):parent(p),choice(1) { type.type1 = t; }
+                          ~~~~~^
+./symbolTable.h:27:25: error: no type named 'function_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::function_decl *t):parent(p),choice(2) { type.type2 = t; }
+                          ~~~~~^
+./symbolTable.h:28:25: error: no type named 'procedure_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
+                          ~~~~~^
+./symbolTable.h:47:40: error: no member named 'identifier' in namespace 'lwd'
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                         ~~~~~^
+./symbolTable.h:47:52: error: expected expression
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                          ^
+./symbolTable.h:47:54: error: expected a type
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                            ^
+./symbolTable.h:50:11: error: use of undeclared identifier 'identifier'
+        std::set<identifier *> const_pool;
+                 ^
+./symbolTable.h:50:23: error: expected expression
+        std::set<identifier *> const_pool;
+                             ^
+./symbolTable.h:55:21: error: no type named 'identifier' in namespace 'lwd'
+        void addConst(lwd::identifier *id) { const_pool.insert(id); }
+                      ~~~~~^
+./symbolTable.h:57:16: error: no member named 'identifier' in namespace 'lwd'
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                 ~~~~~^
+./symbolTable.h:57:28: error: expected expression
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                                  ^
+./symbolTable.h:73:23: error: no type named 'program' in namespace 'lwd'
+        int insertScope(lwd::program *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:92:23: error: no type named 'function_decl' in namespace 'lwd'
+        int insertScope(lwd::function_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:111:23: error: no type named 'procedure_decl' in namespace 'lwd'
+        int insertScope(lwd::procedure_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:136:23: error: no type named 'program' in namespace 'lwd'
+        int lookUpScope(lwd::program *id);
+                        ~~~~~^
+./symbolTable.h:137:23: error: no type named 'function_decl' in namespace 'lwd'
+        int lookUpScope(lwd::function_decl *id);
+                        ~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from parser.y:5:
+In file included from ./declare.h:9:
+./symbolTable.h:22:8: error: no type named 'program' in namespace 'lwd'
+                lwd::program *type1;
+                ~~~~~^
+./symbolTable.h:23:8: error: no type named 'function_decl' in namespace 'lwd'
+                lwd::function_decl *type2;
+                ~~~~~^
+./symbolTable.h:24:8: error: no type named 'procedure_decl' in namespace 'lwd'
+                lwd::procedure_decl *type3;
+                ~~~~~^
+./symbolTable.h:26:25: error: no type named 'program' in namespace 'lwd'
+        scopeValue(int p, lwd::program *t):parent(p),choice(1) { type.type1 = t; }
+                          ~~~~~^
+./symbolTable.h:27:25: error: no type named 'function_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::function_decl *t):parent(p),choice(2) { type.type2 = t; }
+                          ~~~~~^
+./symbolTable.h:28:25: error: no type named 'procedure_decl' in namespace 'lwd'
+        scopeValue(int p, lwd::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
+                          ~~~~~^
+./symbolTable.h:47:40: error: no member named 'identifier' in namespace 'lwd'
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                         ~~~~~^
+./symbolTable.h:47:52: error: expected expression
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                          ^
+./symbolTable.h:47:54: error: expected a type
+        std::map<std::string,std::vector<lwd::identifier *> > table;
+                                                            ^
+./symbolTable.h:50:11: error: use of undeclared identifier 'identifier'
+        std::set<identifier *> const_pool;
+                 ^
+./symbolTable.h:50:23: error: expected expression
+        std::set<identifier *> const_pool;
+                             ^
+./symbolTable.h:55:21: error: no type named 'identifier' in namespace 'lwd'
+        void addConst(lwd::identifier *id) { const_pool.insert(id); }
+                      ~~~~~^
+./symbolTable.h:57:16: error: no member named 'identifier' in namespace 'lwd'
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                 ~~~~~^
+./symbolTable.h:57:28: error: expected expression
+        std::set<lwd::identifier *> &getConstPoll() { return const_pool; }
+                                  ^
+./symbolTable.h:73:23: error: no type named 'program' in namespace 'lwd'
+        int insertScope(lwd::program *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:92:23: error: no type named 'function_decl' in namespace 'lwd'
+        int insertScope(lwd::function_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:111:23: error: no type named 'procedure_decl' in namespace 'lwd'
+        int insertScope(lwd::procedure_decl *id, int parent_scope) {
+                        ~~~~~^
+./symbolTable.h:136:23: error: no type named 'program' in namespace 'lwd'
+        int lookUpScope(lwd::program *id);
+                        ~~~~~^
+./symbolTable.h:137:23: error: no type named 'function_decl' in namespace 'lwd'
+        int lookUpScope(lwd::function_decl *id);
+                        ~~~~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
