@@ -7,7 +7,7 @@
 #include <iterator>
 
 using namespace std;
-using namespace lwd;
+using namespace eddie;
 
 int symbolTable::lookUpScope(program *id) {
 #ifdef SYMBOLTABLE_DEBUG
@@ -72,7 +72,7 @@ int symbolTable::lookUpScope(procedure_decl *id) {
 	return -1;
 }
 
-bool symbolTable::insertID(lwd::identifier *id, int s) {
+bool symbolTable::insertID(eddie::identifier *id, int s) {
 	assert(s<0||s<scope.size());
 #ifdef SYMBOLTABLE_DEBUG
 	printf("Inside insertID(), id = %s , scope = %d\n", 
@@ -87,9 +87,9 @@ bool symbolTable::insertID(lwd::identifier *id, int s) {
 		
 		return false;
 	}
-	map<string,vector<lwd::identifier *> >::iterator iter = table.find(id->name);
+	map<string,vector<eddie::identifier *> >::iterator iter = table.find(id->name);
 	if(iter==table.end()) {
-		table.insert(pair<string,vector<lwd::identifier *> >(id->name,vector<lwd::identifier *>()));
+		table.insert(pair<string,vector<eddie::identifier *> >(id->name,vector<eddie::identifier *>()));
 		iter = table.find(id->name);
 	}
 	iter->second.push_back(id);
@@ -101,13 +101,13 @@ bool symbolTable::insertID(lwd::identifier *id, int s) {
 	return true;
 }
 
-lwd::identifier *symbolTable::lookUp(const lwd::identifier * const id, int s, int &is) const {
+eddie::identifier *symbolTable::lookUp(const eddie::identifier * const id, int s, int &is) const {
 	assert(s<scope.size());
 #ifdef SYMBOLTABLE_DEBUG
 	printf("Inside lookUp(), id = %s , scope = %d\n", 
 		id->name.c_str(), s);
 #endif
-	map<string,vector<lwd::identifier *> >::const_iterator iter = table.find(id->name);
+	map<string,vector<eddie::identifier *> >::const_iterator iter = table.find(id->name);
 	if(iter==table.end()) {
 #ifdef SYMBOLTABLE_DEBUG
 		printf("No such element named %s\n", id->name.c_str());		
@@ -118,7 +118,7 @@ lwd::identifier *symbolTable::lookUp(const lwd::identifier * const id, int s, in
 #endif
 		return NULL;
 	}
-	const vector<lwd::identifier *> & ids = iter->second;
+	const vector<eddie::identifier *> & ids = iter->second;
 	while(s!=-1) {
 		for(int i=0; i<ids.size(); ++i) {
 #ifdef SYMBOLTABLE_DEBUG
@@ -142,13 +142,13 @@ lwd::identifier *symbolTable::lookUp(const lwd::identifier * const id, int s, in
 	return NULL;
 }
 
-lwd::identifier * symbolTable::lookUp(const std::string &name, int s, int &is) const {
+eddie::identifier * symbolTable::lookUp(const std::string &name, int s, int &is) const {
 	assert(s<scope.size());
 #ifdef SYMBOLTABLE_DEBUG
 	printf("Inside lookUp(), name = %s , scope = %d\n", 
 		name.c_str(), s);
 #endif
-	map<string,vector<lwd::identifier *> >::const_iterator iter = table.find(name);
+	map<string,vector<eddie::identifier *> >::const_iterator iter = table.find(name);
 	if(iter==table.end()) {
 #ifdef SYMBOLTABLE_DEBUG
 		printf("No such element named %s\n", name.c_str());		
@@ -159,7 +159,7 @@ lwd::identifier * symbolTable::lookUp(const std::string &name, int s, int &is) c
 #endif
 		return NULL;
 	}
-	const vector<lwd::identifier *> & ids = iter->second;
+	const vector<eddie::identifier *> & ids = iter->second;
 	while(s!=-1) {
 		for(int i=0; i<ids.size(); ++i) {
 #ifdef SYMBOLTABLE_DEBUG

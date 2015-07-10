@@ -1,5 +1,5 @@
-#ifndef _LWD_DECLARE_H_
-#define _LWD_DECLARE_H_
+#ifndef _eddie_DECLARE_H_
+#define _eddie_DECLARE_H_
 
 #include <string>
 #include <cstdio>
@@ -16,7 +16,7 @@ int yyparse();
 
 //#define SEMANTIC_DEBUG
 
-namespace lwd {
+namespace eddie {
 struct identifier;
 struct program;
 struct program_head;
@@ -143,24 +143,24 @@ union u {
 	record_type_decl *record;
 };
 
-extern lwd::program *savedRoot;
+extern eddie::program *savedRoot;
 extern bool error;
 
-lwd::program *parse();
+eddie::program *parse();
 void lower(char str[]);
-void reportNameCollision(lwd::identifier *id, int scope);
-void reportNameMissing(lwd::identifier *id, int scope);
-void reportTypeMismatch(lwd::identifier *id, int scope);
+void reportNameCollision(eddie::identifier *id, int scope);
+void reportNameMissing(eddie::identifier *id, int scope);
+void reportTypeMismatch(eddie::identifier *id, int scope);
 void reportTypeMismatch(int lineno, identifier *id, expression *exp);
 void reportTypeMismatch(int lineno, expression *exp1, expr *exp2);
 void reportTypeMismatch(int lineno, expression *exp, SimpleType stype);
-void reportTypeMismatch(int lineno, lwd::identifier *id, Type type);
-std::string typeString(lwd::identifier *id);
+void reportTypeMismatch(int lineno, eddie::identifier *id, Type type);
+std::string typeString(eddie::identifier *id);
 std::string typeString(expression *exp);
 std::string typeString(expr *exp);
 std::string tString(Type type, SimpleType stype);
-bool typeEqual(lwd::identifier *id, expression *exp);
-bool typeEqual(lwd::identifier *id1, lwd::identifier *id2);
+bool typeEqual(eddie::identifier *id, expression *exp);
+bool typeEqual(eddie::identifier *id1, eddie::identifier *id2);
 bool typeEqual(expression *exp1, expression *exp2);
 bool typeEqual(expression *exp1, expr *exp2);
 bool tEqual(const Type &t1, const SimpleType &s1, const Type &t2, const SimpleType &s2);
@@ -330,13 +330,13 @@ struct simple_type_decl {
 	int choice1;
 	union {
 		sys_type *choice1;
-		lwd::identifier *choice2;
+		eddie::identifier *choice2;
 		name_list *choice3;
 		range *choice4;
 		idrange *choice5;
 	} child1;
 	simple_type_decl(sys_type *c1):choice1(1) { child1.choice1 = c1; }
-	simple_type_decl(lwd::identifier *c2):choice1(2) { child1.choice2 = c2; }
+	simple_type_decl(eddie::identifier *c2):choice1(2) { child1.choice2 = c2; }
 	simple_type_decl(name_list *c3):choice1(3) { child1.choice3 = c3; }
 	simple_type_decl(range *c4):choice1(4) { child1.choice4 = c4; }
 	simple_type_decl(idrange *c5):choice1(5) { child1.choice5 = c5; }

@@ -2,7 +2,7 @@
 
 #include "declare.h"
 #include "util.h"
-using namespace lwd;
+using namespace eddie;
 #include <cstdio>
 #include "y.tab.h"
 int lineno = 1;

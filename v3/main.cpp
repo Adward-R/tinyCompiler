@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <iostream>
 
-using namespace lwd;
+using namespace eddie;
 using namespace std;
 
 void asm_init() {

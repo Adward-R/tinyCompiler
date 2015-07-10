@@ -7,7 +7,7 @@
 #include <cassert>
 
 using namespace std;
-using namespace lwd;
+using namespace eddie;
 
 int compound_stmt::serial = 0;
 char compound_stmt::buff[20];
@@ -15,11 +15,11 @@ char compound_stmt::buff[20];
 static int currentScope = 0;
 static int sbCounter = 0;
 
-symbolTable lwd::gtable;
-lwd::program *lwd::savedRoot;
-bool lwd::error = false;
+symbolTable eddie::gtable;
+eddie::program *eddie::savedRoot;
+bool eddie::error = false;
 
-void lwd::stprint(SimpleType s) {
+void eddie::stprint(SimpleType s) {
 	switch(s) {
 		case iinteger: printf("integer\n"); break;
 		case rreal: printf("real\n"); break;
@@ -1096,7 +1096,6 @@ string compound_stmt::cgen() {
 }
 
 /******************************************/
-/* CZ                                     */
 /* stmt, non_label_stmt, assign_stmt,     */
 /* proc_stmt, expression, expr, term      */
 /******************************************/
@@ -1544,7 +1543,7 @@ string expression::cgen() {
 }
 
 /******************************************/
-/* GJY                                    */
+/* RockiDog                                    */
 /* repeat_stmt, while_stmt, for_stmt,     */
 /* factor                                 */
 /******************************************/
@@ -1911,8 +1910,8 @@ string factor::cgen() {
 
 /***
 * 
-* @author: 高奔
-* 添加  cgen()
+* @author: RockiDog
+* cgen()
 ***/
 
 /**
@@ -1955,7 +1954,8 @@ std::string goto_stmt::cgen(){
 
 /**
 * case_stmt
-* -----------   略去  case_expr_list 直接使用case_expr的链表
+* -----------  
+* case_expr_list deprecated; using linked-list of case_expr
 * case_expr
 **/
 std::string case_stmt::cgen() {
@@ -1965,7 +1965,7 @@ std::string case_stmt::cgen() {
 	std::string lable = to_string(sbCounter);
 	std::string endcaseaddr = "endcaseaddr_" + lable;
 
-	res += child1->cgen();	// 算 expression
+	res += child1->cgen();	// eval expression
 
 	case_expr *temp = child2;
 	int nextLabelCounter = 0;
@@ -1974,7 +1974,7 @@ std::string case_stmt::cgen() {
 		res += temp->cgen();
 		res += "j " + endcaseaddr + "\n";
 		res += "nextcaseaddr_" + to_string(nextLabelCounter) + ":\n";
-		temp = temp->next;	// 好奇怪
+		temp = temp->next;	// ???
 	}
 
 	res = res + endcaseaddr + ":\n";
@@ -2016,9 +2016,9 @@ std::string case_expr::cgen() {
 }
 
 /**
-*  ----------------#expression_list	 #expression  陈正
-*  expr term   高奔
-*  ---------------#factor 	顾建业
+*  ----------------#expression_list	 #expression
+*  expr term
+*  ---------------#factor
 **/
 std::string expr::cgen(){
 	std::string res;
@@ -2123,6 +2123,3 @@ std::string term::cgen(){
 
 	return res;
 }
-/*****************	高奔 finish	****************************/
-
-

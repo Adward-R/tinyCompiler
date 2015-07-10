@@ -6,7 +6,7 @@
 static int global_direction;
 static int label;
 //#define YYDEBUG 1
-using namespace lwd;
+using namespace eddie;
 
 %}
 

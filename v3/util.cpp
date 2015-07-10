@@ -8,9 +8,9 @@
 #include <iostream>
 
 using namespace std;
-//using namespace lwd;
+//using namespace eddie;
 
-namespace lwd {
+namespace eddie {
 
 void lower(char str[]) {
 	char * p= str;
@@ -25,21 +25,21 @@ program *parse() {
 	return savedRoot;
 }
 
-void reportNameCollision(lwd::identifier *id, int scope) {
-	lwd::identifier *temp = gtable.lookUp(id, scope);
+void reportNameCollision(eddie::identifier *id, int scope) {
+	eddie::identifier *temp = gtable.lookUp(id, scope);
 	printf("Inside reportNameCollision(), id = %s, scope = %d; prev_id = %s, prev_scope = %d\n", id->name.c_str(), id->scope, temp->name.c_str(), temp->scope); 
 	assert(temp->scope==id->scope&&temp->name==id->name);
 	fprintf(stderr, "error at line %d : %s was previously defined at line %d.\n", 
 		 id->lineno, temp->name.c_str(), temp->lineno);
 }
 
-void reportNameMissing(lwd::identifier *id, int scope) {
+void reportNameMissing(eddie::identifier *id, int scope) {
 	assert(gtable.lookUp(id, scope)==NULL);
 	fprintf(stderr, "error at line %d : %s is used but never defined.\n", 
 		id->lineno, id->name.c_str());
 }
 
-void reportTypeMismatch(lwd::identifier *id, int scope) {
+void reportTypeMismatch(eddie::identifier *id, int scope) {
 	if(id->type==ssimple_type&&id->stype==iidref) {
 		assert(id->value.idref->typedefinition==false);
 		fprintf(stderr, "error at line %d : need %s be a type, but was previously defined not.\n", 
