@@ -11,7 +11,7 @@
 #include <cstdio>
 #include <iostream>
 
-#define SYMBOLTABLE_DEBUG
+//#define SYMBOLTABLE_DEBUG
 
 namespace eddie {
 
@@ -28,7 +28,7 @@ struct scopeValue{
 	scopeValue(int p, eddie::procedure_decl *t):parent(p),choice(3) { type.type3 = t; }
 	scopeValue(int p):parent(p),choice(0) { }
 	scopeValue(int p, const std::string &s): parent(p), choice(0) { }
-	void print() const { 
+	void print() const {
 		printf("parent : %d, type : ", parent);
 		switch(choice) {
 		case 0: printf("universal"); break;
@@ -61,68 +61,68 @@ public :
 	*/
 	int insertScope() {//for global scope only
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Inside insertScope().\n"); 
+		printf("Inside insertScope().\n");
 #endif
 		scope.push_back(scopeValue(-1, "global"));
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Out of insertScope().\n"); 
+		printf("Out of insertScope().\n");
 #endif
 		return scope.size()-1;
 	}
 
 	int insertScope(eddie::program *id, int parent_scope) {
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Inside insertScope(), id = %s, pscope = %d\n", 
+		printf("Inside insertScope(), id = %s, pscope = %d\n",
 			id->child1->child1->name.c_str(), parent_scope);
 #endif
 		if(lookUpScope(id)!=-1) {
 #ifdef SYMBOLTABLE_DEBUG
-			printf("Out of insertScope(), id = %s, pscope = %d\n", 
+			printf("Out of insertScope(), id = %s, pscope = %d\n",
 				id->child1->child1->name.c_str(), parent_scope);
 #endif
 			return -1;
 		}
 		scope.push_back(scopeValue(parent_scope, id));
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Out of insertScope(), id = %s, pscope = %d\n", 
+		printf("Out of insertScope(), id = %s, pscope = %d\n",
 			id->child1->child1->name.c_str(), parent_scope);
 #endif
 		return scope.size()-1;
 	}
 	int insertScope(eddie::function_decl *id, int parent_scope) {
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Inside insertScope(), id = %s, pscope = %d\n", 
+		printf("Inside insertScope(), id = %s, pscope = %d\n",
 			id->child1->child1->name.c_str(), parent_scope);
 #endif
 		if(lookUpScope(id)!=-1) {
 #ifdef SYMBOLTABLE_DEBUG
-			printf("Out of insertScope(), id = %s, pscope = %d\n", 
+			printf("Out of insertScope(), id = %s, pscope = %d\n",
 				id->child1->child1->name.c_str(), parent_scope);
 #endif
 			return -1;
 		}
 		scope.push_back(scopeValue(parent_scope, id));
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Out of insertScope(), id = %s, pscope = %d\n", 
+		printf("Out of insertScope(), id = %s, pscope = %d\n",
 			id->child1->child1->name.c_str(), parent_scope);
 #endif
 		return scope.size()-1;
 	}
 	int insertScope(eddie::procedure_decl *id, int parent_scope) {
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Inside insertScope(), id = %s, pscope = %d\n", 
+		printf("Inside insertScope(), id = %s, pscope = %d\n",
 			id->child1->child1->name.c_str(), parent_scope);
 #endif
 		if(lookUpScope(id)!=-1) {
 #ifdef SYMBOLTABLE_DEBUG
-			printf("Out of insertScope(), id = %s, pscope = %d\n", 
+			printf("Out of insertScope(), id = %s, pscope = %d\n",
 				id->child1->child1->name.c_str(), parent_scope);
 #endif
 			return -1;
 		}
 		scope.push_back(scopeValue(parent_scope, id));
 #ifdef SYMBOLTABLE_DEBUG
-		printf("Out of insertScope(), id = %s, pscope = %d\n", 
+		printf("Out of insertScope(), id = %s, pscope = %d\n",
 			id->child1->child1->name.c_str(), parent_scope);
 #endif
 		return scope.size()-1;
@@ -140,36 +140,36 @@ public :
 	/*
 	get the scopeValue of the specified scope
 	*/
-	scopeValue getScope(int s) const { 
+	scopeValue getScope(int s) const {
 		//for(int i=0; i<scope.size(); ++i)
 		//	scope[i].print();
-		//std::cout << " in getScope : " << s << std::endl; 
-		assert(s<scope.size()); 
-		return scope.at(s); 
+		//std::cout << " in getScope : " << s << std::endl;
+		assert(s<scope.size());
+		return scope.at(s);
 	}
-	
+
 	/*
 	insert a new identifier into the table
 	if there already exists this name in this scope, return false
 	*/
 	bool insertID(eddie::identifier *id, int scope);
-	
+
 	/*
 	look for the identifier specified by name and scope
 	will return the identifier found in the most nested scope, iscope is set to be the scope of found identifier
 	if it does not exist, return value is NULL
 	*/
 	eddie::identifier *lookUp(const eddie::identifier * const id, int s, int &is) const ;
-	
+
 	eddie::identifier *lookUp(const std::string &id, int s, int &is) const;
-	
+
 	/*
 	similar to the one above except this only looks in the specified scope, not potential parent scopes
 	*/
 
 	eddie::identifier *lookUp(const eddie::identifier * const id, int s) const {
 	#ifdef SYMBOLTABLE_DEBUG
-		printf("Inside lookUp(), id = %s , scope = %d\n", 
+		printf("Inside lookUp(), id = %s , scope = %d\n",
 			id->name.c_str(), s);
 	#endif
 		return lookUp(id, s, s);
@@ -179,14 +179,14 @@ public :
 		int temp;
 		return lookUp(id, s, temp);
 	}
-	
+
 	/*
 	delete and return the specified identifier in the table
 	if it does not exist, the return value is NULL
 	*/
 	//eddie::identifier *pop(const identifier * const id, int s);
 
-	bool addLabel(int l) { 
+	bool addLabel(int l) {
 		label.insert(l);
 		return true;
 	}
